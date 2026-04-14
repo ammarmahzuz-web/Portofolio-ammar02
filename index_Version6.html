@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammar Mahzuz - Full Stack Web Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome untuk Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><circle cx='12' cy='12' r='10'/></svg>">
+    <style>
+        /* Quick loading screen hide */
+        .loading-screen {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle Dark/Light Mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">AM</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Canvas Background -->
+    <section id="home" class="hero">
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Welcome to my portfolio</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="text-gradient">Ammar Mahzuz</span>
+            </h1>
+            <p class="hero-subtitle">Full Stack Web Developer & UI/UX Enthusiast</p>
+            <p class="hero-description">
+                I create beautiful, responsive, and high-performance web experiences using modern technologies. 
+                Passionate about clean code and innovative design solutions.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                    View My Work <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Get In Touch <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <svg class="scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 5v14M5 12l7 7 7-7"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        With 1+ years of experience in web development, I've successfully delivered 10+ projects 
+                        for clients ranging from startups to established corporations. My expertise spans across 
+                        frontend and backend development, with a strong focus on creating user-centric solutions.
+                    </p>
+                    <p>
+                        I'm passionate about staying updated with the latest technologies and best practices. 
+                        When I'm not coding, you can find me contributing to open-source projects, writing technical blogs, 
+                        or mentoring junior developers in the community.
+                    </p>
+                    <div class="about-cta">
+                        <a href="#" class="btn btn-secondary btn-small">Download Resume</a>
+                        <a href="#contact" class="btn btn-secondary btn-small">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card stat-animated">
+                        <div class="stat-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card stat-animated">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>8+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-card stat-animated">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>1+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card stat-animated">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>3+</h3>
+                        <p>Awards & Recognition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Senior Full Stack Developer</h3>
+                        <p class="company">Tech Innovation Corp</p>
+                        <p class="duration"><i class="fas fa-calendar"></i> 2023 - Present</p>
+                        <p class="description">
+                            Leading a team of 5 developers in building scalable web applications. 
+                            Architecting microservices, implementing CI/CD pipelines, and mentoring junior developers.
+                        </p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Developer</h3>
+                        <p class="company">Digital Solutions Inc</p>
+                        <p class="duration"><i class="fas fa-calendar"></i> 2021 - 2023</p>
+                        <p class="description">
+                            Developed and maintained multiple client projects from concept to production. 
+                            Improved application performance by 40% through code optimization.
+                        </p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <p class="company">Creative Agency</p>
+                        <p class="duration"><i class="fas fa-calendar"></i> 2019 - 2021</p>
+                        <p class="description">
+                            Specialized in responsive design and frontend optimization. 
+                            Collaborated with designers to bring pixel-perfect UIs to life.
+                        </p>
+                        <div class="tech-stack">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>SASS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern e-commerce solution with real-time inventory, payment integration, and admin dashboard.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 5.2K views</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mobile App Dashboard</h3>
+                        <p>Real-time analytics dashboard for mobile app monitoring with advanced charts and metrics.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 3.8K views</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Design System</h3>
+                        <p>Comprehensive design system with 200+ reusable components and detailed documentation.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 4.1K views</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Storybook</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Analytics Platform</h3>
+                        <p>Advanced analytics platform with ML-powered insights and interactive visualizations.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 6.3K views</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Streaming Music App</h3>
+                        <p>Music streaming application with personalized recommendations and offline mode.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 7.1K views</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Learning Management System</h3>
+                        <p>Comprehensive online learning platform with courses, assessments, and progress tracking.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-eye"></i> 5.8K views</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML & CSS</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Express.js</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="skill-category-title">Tools & Others</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Figma & Design</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-percent">76%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 76%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">G</div>
+                        <div class="client-info">
+                            <h4>Gitin</h4>
+                            <p>CEO, Tech Startup</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Ammar delivered our entire project on time and exceeded all expectations. 
+                        His attention to detail and problem-solving skills are outstanding. Highly recommended!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">H</div>
+                        <div class="client-info">
+                            <h4>Havid</h4>
+                            <p>Product Manager, Digital Agency</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with Ammar was a game-changer for our project. His technical expertise 
+                        combined with great communication made the entire process smooth and productive."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">R</div>
+                        <div class="client-info">
+                            <h4>Ramma</h4>
+                            <p>Founder, E-Commerce Platform</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The code quality is impeccable, and the performance improvements he made 
+                        resulted in 40% faster load times. Truly a professional developer!"
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">R</div>
+                        <div class="client-info">
+                            <h4>Reza</h4>
+                            <p>CTO, Software Solutions</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Ammar is a reliable and skilled developer who understands business needs. 
+                        His solutions are scalable and well-documented. Looking forward to working with him again!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="contact-subtitle">Have a project in mind? Let's discuss how we can create something amazing together.</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name *" id="name" required>
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email *" id="email" required>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject *" id="subject" required>
+                        <span class="form-error" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="projectType" required>
+                            <option value="">Select Project Type *</option>
+                            <option value="web">Web Application</option>
+                            <option value="mobile">Mobile App</option>
+                            <option value="design">Design System</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="form-error" id="projectTypeError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your project *" id="message" rows="5" required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:ammarmahzuz@gmail.com">ammarmahzuz@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+6285643094039">+62 856-4309-4039</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Cilacap, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Response Time</h4>
+                            <p>Usually within 24 hours</p>
+                        </div>
+                    </div>
+                    <div class="social-section">
+                        <h4>Connect With Me</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Codepen" title="Codepen">
+                                <i class="fab fa-codepen"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Ammar Mahzuz. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
